@@ -8,6 +8,8 @@ from time import sleep
 USERNAME='TypeYourUsernameHere'
 PASSWORD='TypeYourPasswordHere'
 
+USERNAME = input('Type your username:')
+PASSWORD = input('Type your password:')
 
 def claims2dicts(page_source):
 
