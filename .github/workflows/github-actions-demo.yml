@@ -26,7 +26,7 @@ jobs:
 
       - name: Compile with PyInstaller
         run: |
-          pyinstaller --onefile main.py  # Replace with your script name
+          pyinstaller main.py  # Replace with your script name
       - name: available files
         run: |
           ls dist
