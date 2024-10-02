@@ -23,8 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install py2app
           pip install -r requirements.txt  # Include your dependencies
+          pip install --use-pep517
 
-      - name: Compile with PyInstaller
+      - name: Compile with Py2app
         run: |
           py2applet --make-setup main.py
           rm -rf build dist
@@ -37,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: macOS-executable
-          path: build
+          path: dist/main.app
