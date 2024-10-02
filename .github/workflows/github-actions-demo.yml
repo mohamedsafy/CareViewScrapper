@@ -27,7 +27,6 @@ jobs:
 
       - name: Compile with Py2app
         run: |
-          py2applet --make-setup main.py
           rm -rf build dist
           python setup.py py2app -A
       - name: available files
