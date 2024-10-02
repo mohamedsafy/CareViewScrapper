@@ -3,7 +3,7 @@ name: Build macOS Executable
 on:
   push:
     branches:
-      - master  # Change to your default branch if necessary
+      - main  # Change to your default branch if necessary
 
 jobs:
   build:
