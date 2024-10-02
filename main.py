@@ -1,16 +1,17 @@
+'''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import pandas as pd
 from time import sleep
-
+'''
 USERNAME='TypeYourUsernameHere'
 PASSWORD='TypeYourPasswordHere'
 
 USERNAME = input('Type your username:')
 PASSWORD = input('Type your password:')
-
+'''
 def claims2dicts(page_source):
 
     page = BeautifulSoup(page_source)
@@ -104,6 +105,7 @@ def main():
 
     data = invoices2dicts(page_source)
     dicts2excel(data, 'invoices.xlsx')
+    '''
 
 
 if __name__=='__main__':
