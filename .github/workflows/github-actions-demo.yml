@@ -29,7 +29,7 @@ jobs:
         run: |
           py2applet --make-setup main.py
           rm -rf build dist
-          python setup.py py2app -A
+          python setup.py py2app
       - name: available files
         run: |
           ls dist
