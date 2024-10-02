@@ -28,7 +28,7 @@ jobs:
       - name: Compile with Py2app
         run: |
           rm -rf build dist
-          python setup.py py2app -A
+          python setup.py py2app
       - name: available files
         run: |
           ls dist
