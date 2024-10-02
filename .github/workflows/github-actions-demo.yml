@@ -21,12 +21,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller
+          pip install py2app
           pip install -r requirements.txt  # Include your dependencies
 
       - name: Compile with PyInstaller
         run: |
-          pyinstaller main.py  # Replace with your script name
+          py2applet --make-setup main.py
+          rm -rf build dist
+          python setup.py py2app -A
       - name: available files
         run: |
           ls dist
